@@ -1,6 +1,6 @@
 ## Harry Lu 
 
-You can use the [editor on GitHub](https://github.com/harrylu99/harrylu99.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+You can vist the [Game](https://harrylu99.github.io/Simon-Game/) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
