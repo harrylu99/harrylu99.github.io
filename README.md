@@ -1,4 +1,5 @@
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/harrylu99/github-readme-stats)
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=harrylu99)](https://github.com/anuraghazra/github-readme-stats)
+
 
 ## Harry Lu 
 
