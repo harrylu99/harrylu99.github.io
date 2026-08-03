@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code, Mail, ContactRound } from 'lucide-react'
+import { ArrowUpRight, Code, ContactRound } from 'lucide-react'
 
 import { site } from '@/config/site'
 
@@ -9,8 +9,7 @@ const contactLinks = [
     href: site.links.linkedin,
     icon: ContactRound,
     external: true,
-  },
-  // { label: 'Email', href: site.links.email, icon: Mail, external: false }
+  }
 ] as const
 
 export function ContactSection() {
