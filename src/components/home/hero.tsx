@@ -1,28 +1,28 @@
-import { ArrowUpRight, FileText, Code, ContactRound } from 'lucide-react'
+import { ArrowUpRight, FileText, Code, ContactRound } from "lucide-react";
 
-import { site } from '@/config/site'
-import { ThemeToggle } from '@/components/theme-toggle'
+import { site } from "@/config/site";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const socialLinks = [
   {
-    label: 'GitHub',
+    label: "Blog",
+    href: site.links.blog,
+    icon: FileText,
+    external: true,
+  },
+  {
+    label: "GitHub",
     href: site.links.github,
     icon: Code,
     external: true,
   },
   {
-    label: 'LinkedIn',
+    label: "LinkedIn",
     href: site.links.linkedin,
     icon: ContactRound,
     external: true,
   },
-  {
-    label: 'Blog',
-    href: site.links.blog,
-    icon: FileText,
-    external: true,
-  },
-] as const
+] as const;
 
 export function Hero() {
   return (
@@ -36,7 +36,7 @@ export function Hero() {
         </p>
         <h1
           id="hero-title"
-          className="max-w-4xl text-[clamp(3.5rem,12vw,9rem)] leading-[0.9] font-normal tracking-[-0.075em] text-balance"
+          className="max-w-4xl text-[clamp(2.5rem,9vw,6.5rem)] leading-[0.9] font-normal tracking-[-0.075em] text-balance"
         >
           Harry Lu
         </h1>
@@ -50,7 +50,7 @@ export function Hero() {
                 <a
                   href={href}
                   className="group border-border hover:border-foreground hover:bg-foreground hover:text-background inline-flex min-h-11 items-center gap-2 border px-4 text-sm font-medium transition-colors"
-                  {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
                 >
                   <Icon
                     aria-hidden="true"
@@ -72,5 +72,5 @@ export function Hero() {
         </nav>
       </section>
     </section>
-  )
+  );
 }
