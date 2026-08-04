@@ -1,8 +1,11 @@
-# React + TypeScript + Vite
+# Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal site, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+🔗 **Live site:** [[https://harrylu99.github.io/](https://harrylu99.github.io)]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — build tool & dev server
+- [Tailwind CSS](https://tailwindcss.com/) — styling

@@ -1,16 +1,16 @@
-import { ArrowUpRight, Code, ContactRound } from 'lucide-react'
+import { ArrowUpRight, Code, ContactRound } from "lucide-react";
 
-import { site } from '@/config/site'
+import { site } from "@/config/site";
 
 const contactLinks = [
-  { label: 'GitHub', href: site.links.github, icon: Code, external: true },
+  { label: "GitHub", href: site.links.github, icon: Code, external: true },
   {
-    label: 'LinkedIn',
+    label: "LinkedIn",
     href: site.links.linkedin,
     icon: ContactRound,
     external: true,
-  }
-] as const
+  },
+] as const;
 
 export function ContactSection() {
   return (
@@ -27,8 +27,7 @@ export function ContactSection() {
         </h2>
         <div className="md:col-span-8 md:col-start-5 lg:col-span-7">
           <p className="max-w-xl text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.18] tracking-[-0.035em]">
-            Let&apos;s make something considered
-            together.
+            Let&apos;s make something considered together.
           </p>
           <ul className="border-border mt-10 border-t" role="list">
             {contactLinks.map(({ label, href, icon: Icon, external }) => (
@@ -36,7 +35,7 @@ export function ContactSection() {
                 <a
                   href={href}
                   className="group hover:text-muted-foreground flex min-h-14 items-center justify-between gap-4 py-3 text-lg tracking-[-0.02em] transition-colors"
-                  {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
                 >
                   <span className="flex items-center gap-3">
                     <Icon
@@ -60,5 +59,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

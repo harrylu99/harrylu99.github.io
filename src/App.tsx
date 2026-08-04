@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from "react-router";
 
-import { AboutSection } from '@/components/home/about-section'
-import { ContactSection } from '@/components/home/contact-section'
-import { Hero } from '@/components/home/hero'
+import { AboutSection } from "@/components/home/about-section";
+import { ContactSection } from "@/components/home/contact-section";
+import { Hero } from "@/components/home/hero";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         }
       />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
