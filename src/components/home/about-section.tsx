@@ -1,8 +1,8 @@
 const paragraphs = [
-  "I enjoy turning ambitious ideas into clear, reliable digital products.",
-  "My work brings together thoughtful frontend experiences, practical backend systems, and close collaboration.",
-  "I care about the small details that make software feel considered, useful, and easy to return to.",
-];
+  'I enjoy turning ambitious ideas into clear, reliable digital products.',
+  'My work brings together thoughtful frontend experiences, practical backend systems, and close collaboration.',
+  'I care about the small details that make software feel considered, useful, and easy to return to.',
+]
 
 export function AboutSection() {
   return (
@@ -24,5 +24,5 @@ export function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

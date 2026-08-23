@@ -1,16 +1,17 @@
-import { ArrowUpRight, Code, ContactRound } from "lucide-react";
+import { ArrowUpRight, Code, ContactRound } from 'lucide-react'
 
-import { site } from "@/config/site";
+import { site } from '@/config/site'
 
 const contactLinks = [
-  { label: "GitHub", href: site.links.github, icon: Code, external: true },
+  { label: 'GitHub', href: site.links.github, icon: Code, external: true },
   {
-    label: "LinkedIn",
+    label: 'LinkedIn',
     href: site.links.linkedin,
     icon: ContactRound,
     external: true,
   },
-] as const;
+  // { label: 'Email', href: site.links.email, icon: Mail, external: false }
+] as const
 
 export function ContactSection() {
   return (
@@ -35,7 +36,7 @@ export function ContactSection() {
                 <a
                   href={href}
                   className="group hover:text-muted-foreground flex min-h-14 items-center justify-between gap-4 py-3 text-lg tracking-[-0.02em] transition-colors"
-                  {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
                 >
                   <span className="flex items-center gap-3">
                     <Icon
@@ -59,5 +60,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
