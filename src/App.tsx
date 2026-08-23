@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router'
 
 import { HomePage } from '@/components/home/home-page'
 import { WemilkteaCaseStudy } from '@/components/projects/wemilktea/wemilktea-case-study'
+import { WemilkteaSystemDesignCaseStudy } from '@/components/projects/wemilktea/system-design-case-study'
 import { NotFoundPage } from '@/pages/not-found-page'
 
 function RouteScroll() {
@@ -29,6 +30,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects/wemilktea" element={<WemilkteaCaseStudy />} />
+        <Route
+          path="/projects/wemilktea/system-design"
+          element={<WemilkteaSystemDesignCaseStudy />}
+        />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>

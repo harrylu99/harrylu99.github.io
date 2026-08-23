@@ -1,7 +1,7 @@
 const paragraphs = [
   'I enjoy turning ambitious ideas into clear, reliable digital products.',
   'My work brings together thoughtful frontend experiences, practical backend systems, and close collaboration.',
-  'I care about the small details that make software feel considered, useful, and easy to return to.',
+  'I like the part where a vague idea slowly turns into something useful, polished, and slightly less annoying than before.',
 ]
 
 export function AboutSection() {
