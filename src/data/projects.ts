@@ -11,7 +11,7 @@ export const projects = [
     technologies: ['React', 'TypeScript', 'Supabase', 'Cloudflare'],
     heroImage: {
       src: heroImage,
-      alt: 'Current WeMilktea homepage for Auckland milk-tea discovery.',
+      alt: 'Current WeMilktea homepage for Auckland milk tea discovery.',
     },
     links: {
       live: 'https://web.wemilkteanz.workers.dev/',

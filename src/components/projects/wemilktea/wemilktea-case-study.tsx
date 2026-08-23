@@ -107,7 +107,7 @@ export function WemilkteaCaseStudy() {
     document.title = 'WeMilktea UI/UX Redesign — Harry Lu'
     description?.setAttribute(
       'content',
-      'How I redesigned WeMilktea from an early milk-tea directory into a clearer, connected Auckland discovery experience.',
+      'How I redesigned WeMilktea from an early milk tea directory into a clearer, connected Auckland discovery experience.',
     )
 
     return () => {
@@ -143,7 +143,7 @@ export function WemilkteaCaseStudy() {
             WeMilktea
           </h1>
           <p className="mt-8 max-w-3xl text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.12] tracking-[-0.035em]">
-            From a milk-tea directory to a connected discovery experience.
+            From a milk tea directory to a connected discovery experience.
           </p>
           <p className="text-muted-foreground mt-8 max-w-2xl text-lg leading-relaxed">
             I revisited the original WeMilktea experience to rethink its
@@ -209,12 +209,12 @@ export function WemilkteaCaseStudy() {
             <div className="space-y-6 text-lg leading-relaxed md:col-span-7 md:col-start-5">
               <p>
                 WeMilktea started in 2022 as a personal project for discovering
-                milk-tea stores and drinks around Auckland.
+                milk tea stores and drinks around Auckland.
               </p>
               <p>
                 The original experience had three destinations — Home, Explore,
                 and Find Store. It had a distinctive visual identity and useful
-                milk-tea content, but its structure made it difficult to support
+                milk tea content, but its structure made it difficult to support
                 the complete journey from “I want milk tea” to “What should I
                 get?” and “Where can I get it?”
               </p>
@@ -223,7 +223,7 @@ export function WemilkteaCaseStudy() {
           <figure className="mt-16 md:ml-[25%] md:max-w-3xl">
             <img
               src={originalHomeDiscovery}
-              alt="Original WeMilktea homepage showing Top Pick Store, Top Drink, and a free milk-tea promotion."
+              alt="Original WeMilktea homepage showing Top Pick Store, Top Drink, and a free milk tea promotion."
               width={1800}
               height={1293}
               className="border-border block h-auto w-full border"
