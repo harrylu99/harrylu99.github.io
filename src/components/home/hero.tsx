@@ -23,7 +23,7 @@ export function Hero() {
         </p>
         <h1
           id="hero-title"
-          className="max-w-4xl text-[clamp(3.5rem,6vw,9rem)] leading-[0.9] font-normal tracking-[-0.06em] text-balance"
+          className="max-w-4xl text-[clamp(3.5rem,5vw,5rem)] leading-[0.9] font-normal tracking-[-0.06em] text-balance"
         >
           Harry Lu
         </h1>

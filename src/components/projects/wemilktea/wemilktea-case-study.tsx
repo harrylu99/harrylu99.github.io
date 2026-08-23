@@ -9,6 +9,7 @@ import originalHomeDiscovery from '@/assets/projects/wemilktea/original-home-dis
 import originalDrinks from '@/assets/projects/wemilktea/comparisons/original-drinks.webp'
 import originalHomeHero from '@/assets/projects/wemilktea/comparisons/original-home.webp'
 import originalStores from '@/assets/projects/wemilktea/comparisons/original-stores.webp'
+import { CaseStudySwitcher } from '@/components/projects/wemilktea/case-study-switcher'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { projects } from '@/data/projects'
 
@@ -38,7 +39,7 @@ function SectionHeading({
       </p>
       <h2
         id={id}
-        className="max-w-4xl text-[clamp(2.25rem,5vw,5rem)] leading-[0.96] tracking-[-0.06em] md:col-span-8 md:col-start-5"
+        className="max-w-4xl text-[clamp(2.25rem,4vw,4rem)] leading-[0.96] tracking-[-0.06em] md:col-span-8 md:col-start-5"
       >
         {title}
       </h2>
@@ -120,8 +121,8 @@ export function WemilkteaCaseStudy() {
 
   return (
     <main>
-      <section className="mx-auto w-full max-w-7xl px-5 pt-6 pb-16 sm:px-8 sm:pt-8 sm:pb-24 lg:px-10 lg:pb-32">
-        <div className="flex items-center justify-between gap-4">
+      <header className="bg-background/95 border-border sticky top-0 z-40 border-b backdrop-blur-sm">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8 sm:py-4 lg:px-10">
           <Link
             to="/#projects"
             className="text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center gap-2 font-mono text-xs tracking-wide transition-colors"
@@ -135,11 +136,16 @@ export function WemilkteaCaseStudy() {
           </Link>
           <ThemeToggle />
         </div>
+      </header>
+
+      <CaseStudySwitcher active="product" />
+
+      <section className="mx-auto w-full max-w-7xl px-5 pt-6 pb-16 sm:px-8 sm:pt-8 sm:pb-24 lg:px-10 lg:pb-32">
         <div className="mt-20 max-w-4xl sm:mt-28">
           <p className="text-muted-foreground font-mono text-xs tracking-wide">
             PROJECT · WEMILKTEA
           </p>
-          <h1 className="mt-6 text-[clamp(3.25rem,10vw,8rem)] leading-[0.92] tracking-[-0.055em] text-balance">
+          <h1 className="mt-6 text-[clamp(3.5rem,5vw,5rem)] leading-[0.92] tracking-[-0.055em] text-balance">
             WeMilktea
           </h1>
           <p className="mt-8 max-w-3xl text-[clamp(1.5rem,3vw,2.25rem)] leading-[1.12] tracking-[-0.035em]">
@@ -195,7 +201,7 @@ export function WemilkteaCaseStudy() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <section
           id="background"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="background-title"
@@ -238,7 +244,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="problems"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="problems-title"
@@ -283,7 +289,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="process"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="process-title"
@@ -315,7 +321,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="information-architecture"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="information-architecture-title"
@@ -377,7 +383,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="design-system"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="design-system-title"
@@ -419,7 +425,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="key-flows"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="key-flows-title"
@@ -579,7 +585,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="outcome"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="outcome-title"
@@ -610,7 +616,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="before-after"
-          className="border-border scroll-mt-8 border-b py-24 sm:py-36 lg:py-44"
+          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="before-after-title"
@@ -674,7 +680,7 @@ export function WemilkteaCaseStudy() {
 
         <section
           id="what-i-learned"
-          className="scroll-mt-8 py-24 sm:py-36 lg:py-44"
+          className="scroll-mt-24 py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="what-i-learned-title"
@@ -717,6 +723,17 @@ export function WemilkteaCaseStudy() {
 
       <section className="border-border border-t">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center gap-3 px-5 py-16 sm:px-8 sm:py-24 lg:px-10">
+          <Link
+            to="/#projects"
+            className="border-border hover:border-foreground hover:bg-foreground hover:text-background focus-visible:outline-foreground inline-flex min-h-11 items-center gap-2 border px-4 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4"
+          >
+            Back to projects
+            <ArrowLeft
+              aria-hidden="true"
+              className="size-4"
+              strokeWidth={1.5}
+            />
+          </Link>
           <a
             href={project.links.live}
             target="_blank"
@@ -730,17 +747,7 @@ export function WemilkteaCaseStudy() {
               strokeWidth={1.5}
             />
           </a>
-          <Link
-            to="/#projects"
-            className="border-border hover:border-foreground hover:bg-foreground hover:text-background focus-visible:outline-foreground inline-flex min-h-11 items-center gap-2 border px-4 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-4"
-          >
-            Back to projects
-            <ArrowLeft
-              aria-hidden="true"
-              className="size-4"
-              strokeWidth={1.5}
-            />
-          </Link>
+
           <a
             href={project.links.repository}
             target="_blank"
