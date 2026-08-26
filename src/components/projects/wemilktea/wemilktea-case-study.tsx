@@ -5,6 +5,7 @@ import { Link } from 'react-router'
 import currentDrinks from '@/assets/projects/wemilktea/current-drinks.webp'
 import currentHome from '@/assets/projects/wemilktea/current-home.webp'
 import currentStores from '@/assets/projects/wemilktea/current-stores.webp'
+import currentCaseStudyHero from '@/assets/projects/wemilktea/wemilktea-case-study-hero.webp'
 import originalHomeDiscovery from '@/assets/projects/wemilktea/original-home-discovery.webp'
 import originalDrinks from '@/assets/projects/wemilktea/comparisons/original-drinks.webp'
 import originalHomeHero from '@/assets/projects/wemilktea/comparisons/original-home.webp'
@@ -159,10 +160,10 @@ export function WemilkteaCaseStudy() {
           </p>
         </div>
         <img
-          src={currentHome}
-          alt="Current WeMilktea discovery homepage."
-          width={1280}
-          height={720}
+          src={currentCaseStudyHero}
+          alt="Current WeMilktea discovery experience shown across a desktop home and mobile home view."
+          width={1600}
+          height={900}
           className="border-border mt-16 block h-auto w-full border sm:mt-24"
         />
       </section>
