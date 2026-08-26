@@ -1,4 +1,4 @@
-import heroImage from '@/assets/projects/wemilktea/current-home.webp'
+import heroImage from '@/assets/projects/wemilktea/wemilktea-project-cover.webp'
 import type { Project } from '@/types/project'
 
 export const projects = [
@@ -11,7 +11,7 @@ export const projects = [
     technologies: ['React', 'TypeScript', 'Supabase', 'Cloudflare'],
     heroImage: {
       src: heroImage,
-      alt: 'Current WeMilktea homepage for Auckland milk tea discovery.',
+      alt: 'WeMilktea product cover showing the desktop home, stores map, drinks catalogue and mobile home experience.',
     },
     links: {
       live: 'https://web.wemilkteanz.workers.dev/',
