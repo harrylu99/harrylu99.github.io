@@ -1,6 +1,9 @@
 export interface ProjectImage {
-  src: string
+  lightSrc: string
+  darkSrc: string
   alt: string
+  width: number
+  height: number
 }
 
 export interface ProjectLinks {
