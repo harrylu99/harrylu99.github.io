@@ -2,14 +2,19 @@ import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { useEffect } from 'react'
 import { Link } from 'react-router'
 
-import currentDrinks from '@/assets/projects/wemilktea/current-drinks.webp'
-import currentHome from '@/assets/projects/wemilktea/current-home.webp'
-import currentStores from '@/assets/projects/wemilktea/current-stores.webp'
-import currentCaseStudyHero from '@/assets/projects/wemilktea/wemilktea-case-study-hero.webp'
+import currentCoverDark from '@/assets/projects/wemilktea/wemilktea-cover-dark.webp'
+import currentCoverLight from '@/assets/projects/wemilktea/wemilktea-cover-light.webp'
+import currentDrinksDark from '@/assets/projects/wemilktea/wemilktea-drinks-dark.webp'
+import currentDrinksLight from '@/assets/projects/wemilktea/wemilktea-drinks-light.webp'
+import currentHomeDark from '@/assets/projects/wemilktea/wemilktea-home-dark.webp'
+import currentHomeLight from '@/assets/projects/wemilktea/wemilktea-home-light.webp'
+import currentStoresDark from '@/assets/projects/wemilktea/wemilktea-stores-dark.webp'
+import currentStoresLight from '@/assets/projects/wemilktea/wemilktea-stores-light.webp'
 import originalHomeDiscovery from '@/assets/projects/wemilktea/original-home-discovery.webp'
 import originalDrinks from '@/assets/projects/wemilktea/comparisons/original-drinks.webp'
 import originalHomeHero from '@/assets/projects/wemilktea/comparisons/original-home.webp'
 import originalStores from '@/assets/projects/wemilktea/comparisons/original-stores.webp'
+import { ThemeImage } from '@/components/theme-image'
 import { CaseStudySwitcher } from '@/components/projects/wemilktea/case-study-switcher'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { projects } from '@/data/projects'
@@ -17,12 +22,11 @@ import { projects } from '@/data/projects'
 const project = projects[0]
 
 type CaseStudyImage = {
-  src: string
   alt: string
   caption: string
   width: number
   height: number
-}
+} & ({ src: string } | { lightSrc: string; darkSrc: string })
 
 function SectionHeading({
   id,
@@ -48,6 +52,35 @@ function SectionHeading({
   )
 }
 
+function CaseStudyVisual({ image }: { image: CaseStudyImage }) {
+  const className = 'border-border block h-auto w-full border'
+
+  if ('lightSrc' in image) {
+    return (
+      <ThemeImage
+        lightSrc={image.lightSrc}
+        darkSrc={image.darkSrc}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        className={className}
+        loading="lazy"
+      />
+    )
+  }
+
+  return (
+    <img
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      className={className}
+      loading="lazy"
+    />
+  )
+}
+
 function Comparison({
   label,
   original,
@@ -65,14 +98,7 @@ function Comparison({
       <div className="grid items-start gap-6 md:grid-cols-2">
         <figure className="min-w-0">
           <div className="border-border bg-muted p-3 sm:p-5">
-            <img
-              src={original.src}
-              alt={original.alt}
-              width={original.width}
-              height={original.height}
-              className="border-border block h-auto w-full border"
-              loading="lazy"
-            />
+            <CaseStudyVisual image={original} />
           </div>
           <figcaption className="text-muted-foreground mt-3 font-mono text-xs">
             <span className="text-foreground">Original</span> ·{' '}
@@ -81,14 +107,7 @@ function Comparison({
         </figure>
         <figure className="min-w-0">
           <div className="border-border bg-muted p-3 sm:p-5">
-            <img
-              src={redesign.src}
-              alt={redesign.alt}
-              width={redesign.width}
-              height={redesign.height}
-              className="border-border block h-auto w-full border"
-              loading="lazy"
-            />
+            <CaseStudyVisual image={redesign} />
           </div>
           <figcaption className="text-muted-foreground mt-3 font-mono text-xs">
             <span className="text-foreground">Redesign</span> ·{' '}
@@ -159,12 +178,14 @@ export function WemilkteaCaseStudy() {
             drink and where to get it.
           </p>
         </div>
-        <img
-          src={currentCaseStudyHero}
-          alt="Current WeMilktea discovery experience shown across a desktop home and mobile home view."
-          width={1600}
-          height={900}
+        <ThemeImage
+          lightSrc={currentCoverLight}
+          darkSrc={currentCoverDark}
+          alt="WeMilktea responsive product overview."
+          width={2560}
+          height={1600}
           className="border-border mt-16 block h-auto w-full border sm:mt-24"
+          loading="eager"
         />
       </section>
 
@@ -182,8 +203,7 @@ export function WemilkteaCaseStudy() {
               ['05', 'Design system', '#design-system'],
               ['06', 'Key flows', '#key-flows'],
               ['07', 'Outcome', '#outcome'],
-              ['08', 'Before / after', '#before-after'],
-              ['09', 'What I learned', '#what-i-learned'],
+              ['08', 'What I learned', '#what-i-learned'],
             ].map(([number, label, href]) => (
               <li key={href}>
                 <a
@@ -454,11 +474,12 @@ export function WemilkteaCaseStudy() {
                     height: 720,
                   }}
                   redesign={{
-                    src: currentHome,
-                    alt: 'Current WeMilktea Home with a discovery-first hero and Pick for me action.',
+                    lightSrc: currentHomeLight,
+                    darkSrc: currentHomeDark,
+                    alt: 'WeMilktea Home experience.',
                     caption: 'Current',
-                    width: 1280,
-                    height: 720,
+                    width: 1744,
+                    height: 1840,
                   }}
                 />
                 <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed">
@@ -490,11 +511,12 @@ export function WemilkteaCaseStudy() {
                     height: 720,
                   }}
                   redesign={{
-                    src: currentStores,
-                    alt: 'Current WeMilktea Stores page showing search, filters, a store list, and the Auckland map.',
+                    lightSrc: currentStoresLight,
+                    darkSrc: currentStoresDark,
+                    alt: 'WeMilktea Stores discovery experience.',
                     caption: 'Current',
-                    width: 1280,
-                    height: 720,
+                    width: 1744,
+                    height: 1332,
                   }}
                 />
                 <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed">
@@ -526,11 +548,12 @@ export function WemilkteaCaseStudy() {
                     height: 720,
                   }}
                   redesign={{
-                    src: currentDrinks,
-                    alt: 'Current WeMilktea Drinks page showing search, category filters, and a responsive catalogue.',
+                    lightSrc: currentDrinksLight,
+                    darkSrc: currentDrinksDark,
+                    alt: 'WeMilktea Drinks catalogue.',
                     caption: 'Current',
-                    width: 1280,
-                    height: 720,
+                    width: 1744,
+                    height: 1332,
                   }}
                 />
                 <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed">
@@ -616,76 +639,12 @@ export function WemilkteaCaseStudy() {
         </section>
 
         <section
-          id="before-after"
-          className="border-border scroll-mt-24 border-b py-24 sm:py-36 lg:py-44"
-        >
-          <SectionHeading
-            id="before-after-title"
-            number="08"
-            title="Before / after"
-          />
-          <div className="mt-14 grid gap-16">
-            <Comparison
-              label="Home"
-              original={{
-                src: originalHomeHero,
-                alt: 'Original 2022 WeMilktea Home hero with WE LOVE MILKTEA campaign typography and a promotional visual.',
-                caption: '2022',
-                width: 1280,
-                height: 720,
-              }}
-              redesign={{
-                src: currentHome,
-                alt: 'Current WeMilktea Home with a discovery-first hero and Pick for me action.',
-                caption: 'Current',
-                width: 1280,
-                height: 720,
-              }}
-            />
-            <Comparison
-              label="Stores"
-              original={{
-                src: originalStores,
-                alt: 'Original 2022 Find Store page organised around Auckland CBD and store cards.',
-                caption: '2022',
-                width: 1280,
-                height: 720,
-              }}
-              redesign={{
-                src: currentStores,
-                alt: 'Current WeMilktea Stores page showing search, filters, a store list, and the Auckland map.',
-                caption: 'Current',
-                width: 1280,
-                height: 720,
-              }}
-            />
-            <Comparison
-              label="Drinks"
-              original={{
-                src: originalDrinks,
-                alt: 'Original 2022 Explore page grouped under YiFang with drink cards and prices.',
-                caption: '2022',
-                width: 1280,
-                height: 720,
-              }}
-              redesign={{
-                src: currentDrinks,
-                alt: 'Current WeMilktea Drinks page showing search, category filters, and a responsive catalogue.',
-                caption: 'Current',
-                width: 1280,
-                height: 720,
-              }}
-            />
-          </div>
-        </section>
-
-        <section
           id="what-i-learned"
           className="scroll-mt-24 py-24 sm:py-36 lg:py-44"
         >
           <SectionHeading
             id="what-i-learned-title"
-            number="09"
+            number="08"
             title="What I learned"
           />
           <ol className="border-border mt-14 border-t md:ml-[25%] md:max-w-3xl">

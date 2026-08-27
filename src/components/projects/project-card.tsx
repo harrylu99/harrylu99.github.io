@@ -1,6 +1,7 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router'
 
+import { ThemeImage } from '@/components/theme-image'
 import type { Project } from '@/types/project'
 
 interface ProjectCardProps {
@@ -10,13 +11,14 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="group border-border bg-background hover:border-foreground focus-within:border-foreground border transition-colors">
-      <div className="border-border bg-muted aspect-[16/9] overflow-hidden border-b">
-        <img
-          src={project.heroImage.src}
+      <div className="border-border bg-muted overflow-hidden border-b">
+        <ThemeImage
+          lightSrc={project.heroImage.lightSrc}
+          darkSrc={project.heroImage.darkSrc}
           alt={project.heroImage.alt}
-          width={1280}
-          height={720}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.01] motion-reduce:transition-none"
+          width={project.heroImage.width}
+          height={project.heroImage.height}
+          className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.01] motion-reduce:transition-none"
           loading="lazy"
         />
       </div>

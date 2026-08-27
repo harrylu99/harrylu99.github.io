@@ -1,4 +1,5 @@
-import heroImage from '@/assets/projects/wemilktea/wemilktea-project-cover.webp'
+import heroImageDark from '@/assets/projects/wemilktea/wemilktea-cover-dark.webp'
+import heroImageLight from '@/assets/projects/wemilktea/wemilktea-cover-light.webp'
 import type { Project } from '@/types/project'
 
 export const projects = [
@@ -10,8 +11,11 @@ export const projects = [
     description: 'Auckland milktea discovery',
     technologies: ['React', 'TypeScript', 'Supabase', 'Cloudflare'],
     heroImage: {
-      src: heroImage,
-      alt: 'WeMilktea product cover showing the desktop home, stores map, drinks catalogue and mobile home experience.',
+      lightSrc: heroImageLight,
+      darkSrc: heroImageDark,
+      alt: 'WeMilktea responsive product overview.',
+      width: 2560,
+      height: 1600,
     },
     links: {
       live: 'https://web.wemilkteanz.workers.dev/',
